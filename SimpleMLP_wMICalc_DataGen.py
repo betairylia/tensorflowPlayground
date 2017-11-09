@@ -45,8 +45,22 @@ def gen_epochs(n):
     for i in range(n):
         yield gen_batch(gen_data(dataCount), batch_size)
 
-def calculateMI_Plane(x, t, y):
-    # TODO
+def array_to_number(a):
+    result = 0
+    for i in range(len(a)):
+        result *= 2
+        if(a[len(a) - i - 1] > 0):
+            result += 1
+
+def calculateMI_Plane(x, t, y, binCount = 16):
+    # Push T into bins
+    T_bins = np.zeros((len(t), binCount))
+    for i in range(len(t)):
+        print(t[i])
+        T_bins[i] = np.histogram(t[i], bins=binCount, range=(-1.0, 1.0))
+    print (T_bins)
+
+    return (len(t), len(t))
 
 #Variable used for calculation
 weight = []
@@ -104,7 +118,13 @@ def train_network(num_epochs, verbose=True, printInterval=1, calculateMI=True):
 
                 #calculate Mutual Information
                 if calculateMI:
+                    layerData = \
+                        sess.run(layer, feed_dict={X:Xdata, Y:Ydata})
+                    # print (layerData[0])
 
+                    for layerId in range(len(layerData) - 1):
+                        (IX_T, IT_Y) = calculateMI_Plane(Xdata, layerData[layerId], Ydata)
+                        print ("X: ", IX_T, " Y: ", IT_Y)
 
                 #show training status
                 if step % printInterval == 0 and step > 0:
