@@ -30,6 +30,5 @@ Zoom Up:
 ![](Images/MIPlane_MLP_I12_12_10_6_10_6_O4_30wData_150Minibatch_lr0.1.png)
 
 
->Ref:
-
+>Ref:  
 >Shwartz-Ziv, Ravid, and Naftali Tishby. "Opening the Black Box of Deep Neural Networks via Information." arXiv preprint arXiv:1703.00810 (2017).
