@@ -23,10 +23,10 @@ Zoom Up:
 ![](Images/MIPlane_MLP_I12_12_10_8_6_5_O4_30wData_150Minibatch_lr0.1_Layer123Local.png)
 
 
-**Change the MLP to: ** 12 - 10 - 8 - 6 - **6** :  
+**Change the MLP to:** 12 - 10 - 8 - 6 - **6** :  
 ![](Images/MIPlane_MLP_I12_12_10_8_6_6_O4_30wData_150Minibatch_lr0.1.png)
 
-**Change the MLP to: ** 12 - 10 - **6 - 10 - 6** :  
+**Change the MLP to:** 12 - 10 - **6 - 10 - 6** :  
 ![](Images/MIPlane_MLP_I12_12_10_6_10_6_O4_30wData_150Minibatch_lr0.1.png)
 
 
